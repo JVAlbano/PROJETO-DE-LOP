@@ -1,0 +1,46 @@
+var x = 200;
+var y = 300;
+var my = 10;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw(nave) {
+  background(0);
+  
+  let y3 = 0;
+  y3 = y3 + 0.5;
+  var mx = random(10, 380);
+  fill(0, 0, 0);
+  rect(mx, 30, 50, 50);
+  
+  if(x > 400)
+    x = 0;
+  
+  if(x < 0)
+    x = 400;
+  
+  if(y > 400)
+    y = 0;
+  
+  if(y < 0)
+     y = 400;
+  
+  if (keyIsDown(LEFT_ARROW))
+    x-=10;
+
+  if (keyIsDown(RIGHT_ARROW))
+    x+=10;
+
+  if (keyIsDown(UP_ARROW))
+    y-=10;
+
+  if (keyIsDown(DOWN_ARROW))
+    y+=10;
+ 
+  fill(255,0,0)
+  ellipse(x, y, 50, 50);
+  
+  
+}
