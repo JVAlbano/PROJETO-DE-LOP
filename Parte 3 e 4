@@ -1,0 +1,51 @@
+/*
+   Equipe:
+      João Victor Albano do Amaral Silva - Subturma A (Líder)
+      Rafael Pinheiro Carlos Maia - Subturma A
+      Etapa 3 & 4
+*/
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+}
+y = 300
+x = 50
+xd = 0;
+yd = 30;
+var estadod = false;
+
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(255);
+
+  // bola azul grande
+  fill(0, 0, 255);
+  ellipse(x, y, 50, 50);
+  x = x + 5;
+
+     if (x > 425){
+    x= -random(600);
+     }
+
+    // bola disparo
+    if(keyIsDown(CONTROL) && estadod === false) {
+       xd = x;
+       yd = y;
+      estadod = true
+       }
+
+  if(estadod === true){
+  ellipse(xd, yd, 10, 10);
+    yd = yd - 10
+    if(yd < 0){
+      estadod = false
+    }
+  }
+}
