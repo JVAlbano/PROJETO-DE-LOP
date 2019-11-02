@@ -1,3 +1,12 @@
+/*
+   Equipe:
+      João Victor Albano do Amaral Silva - Subturma A (Líder)
+      Rafael Pinheiro Carlos Maia - Subturma A
+      Etapa 7 & 8
+*/
+
+//Etapa 7
+
 var vxo= []
 var vyo= []
 var vtam= []
@@ -16,4 +25,27 @@ function draw() {
   for(var i=0;i < qtobjetos; i++){
     ellipse(vxo[i],vyo[i], vtam[i],vtam[i])
 }
+}
+
+//Etapa 8
+
+var pontos=0
+var nivel = 1
+var barreiradepontos= 1000
+function setup() {
+  createCanvas(400, 400);
+  frameRate(30)
+}
+
+function draw() {
+  background(0);
+  textSize(24)
+  fill(35,135,235)
+  text('Nivel:'+ nivel,30,60)
+  text('Pontos:'+ pontos,210,60)
+  pontos=pontos+10
+  if(pontos>barreiradepontos){
+    nivel++
+    barreiradepontos=barreiradepontos+1000
+  }
 }
